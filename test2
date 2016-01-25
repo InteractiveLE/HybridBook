@@ -1,0 +1,71 @@
+@prefix ab: <http://uvdt.test.iminds.be/pub/hybrid/hybb> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+<http://uvdt.test.iminds.be/pub/hybrid/hybb> rdf:type owl:Ontology ;
+        owl:versionIRI <http://uvdt.test.iminds.be/pub/hybrid/hybb> .
+ab:hasColor rdf:type owl:ObjectProperty .
+ab:hasHeat rdf:type owl:ObjectProperty .
+ab:hasHeat rdf:type owl:ObjectProperty .
+ab:hasShake rdf:type owl:ObjectProperty .
+ab:hasSound rdf:type owl:ObjectProperty .
+ab:Animal rdf:type owl:Class .
+ab:Color rdf:type owl:Class .
+ab:Emotion rdf:type owl:Class .
+ab:Event rdf:type owl:Class .
+ab:Temperature  rdf:type owl:Class .
+ab:Speed rdf:type owl:Class .
+ab:Afraid rdf:type ab:Emotion;
+        ab:hasColor "Orange" .
+ab:Angry rdf:type ab:Emotion ,
+                owl:NamedIndividual ;
+       ab:hasColor ab:Red .
+ab:Bird rdf:type ab:Animal;
+      ab:hasSound "Bird" .
+ab:Blue rdf:type ab:Color ,
+               owl:NamedIndividual .
+ab:Cold rdf:type ab:Temperature  ,
+               owl:NamedIndividual ;
+      ab:hasHeat ab:Cold .
+ab:Disgusted rdf:type ab:Emotion ,
+                   owl:NamedIndividual ;
+           ab:hasColor ab:Purple .
+ab:Earthquake rdf:type ab:Event ,
+                     owl:NamedIndividual ;
+            ab:hasShake ab:Fast .
+ab:Fast rdf:type ab:Speed ,
+               owl:NamedIndividual .
+ab:Green rdf:type ab:Color ,
+                owl:NamedIndividual .
+ab:Happy rdf:type ab:Emotion ,
+                owl:NamedIndividual ;
+       ab:hasColor ab:Green .
+ab:Orange rdf:type ab:Color ,
+                 owl:NamedIndividual .
+ab:Purple rdf:type ab:Color ,
+                 owl:NamedIndividual .
+ab:Red rdf:type ab:Color ,
+              owl:NamedIndividual .
+ab:Sad rdf:type ab:Emotion ,
+              owl:NamedIndividual ;
+     ab:hasColor ab:Blue .
+ab:Slow rdf:type ab:Speed ,
+               owl:NamedIndividual .
+ab:Sparrow rdf:type owl:NamedIndividual ;
+         ab:hasSound ab:Sparrow .
+ab:Surprised rdf:type ab:Emotion ,
+                    owl:NamedIndividual ;
+           ab:hasColor ab:Yellow .
+ab:Thunderstorm rdf:type ab:Event ,
+                       owl:NamedIndividual ;
+              ab:hasSound ab:Thunderstorm .
+ab:Warm rdf:type ab:Temperature ,
+               owl:NamedIndividual ;
+      ab:hasHeat ab:Warm .
+ab:Wolf rdf:type ab:Animal ,
+               owl:NamedIndividual ;
+      ab:hasSound ab:Wolf .
+ab:Yellow rdf:type ab:Color ,
+                 owl:NamedIndividual .
